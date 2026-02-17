@@ -62,12 +62,12 @@ body {
     position: absolute;
     width: 8%;
     height: 50%;
-    background: repeating-linear-gradient( to bottom, #ffffff 0px, #a6d3ff 10px,#4da6ff 50px);
-    background-size: 100% 50px; 
+    background: repeating-linear-gradient( to bottom, #ffffff 0px, #a6d3ff 10px,#4da6ff 100px);
+    background-size: 100% 100px; 
     top: 40%;
     left: 35%; 
     border-radius: 15%;
-    animation: caida 0.4s infinite linear;
+    animation: caida 2s infinite linear;
 }
 
 @keyframes caida {
@@ -75,7 +75,7 @@ body {
         background-position: 0 0;
     }
     to {
-        background-position: 0 50px;
+        background-position: 0 100px;
     }
 }
 
