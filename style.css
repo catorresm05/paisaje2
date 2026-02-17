@@ -62,7 +62,8 @@ body {
     position: absolute;
     width: 8%;
     height: 50%;
-    background: linear-gradient(to bottom, #ffffff, #4da6ff);
+    background: linear-gradient(to bottom, #ffffff, #4da6ff, #ffffff);
+    background-size: 100% 200%; 
     top: 40%;
     left: 35%; 
     border-radius: 20%;
@@ -74,7 +75,7 @@ body {
         background-position: 0 0;
     }
     100% {
-        background-position: 0 3px;
+        background-position: 0 100%;
     }
 }
 
