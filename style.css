@@ -62,8 +62,8 @@ body {
     position: absolute;
     width: 8%;
     height: 50%;
-    background: repeating-linear-gradient( to bottom, #ffffff 0px, #a6d3ff 10px,#4da6ff 100px);
-    background-size: 100% 100px; 
+    background: repeating-linear-gradient(to bottom, #ffffff 0px, #a6d3ff 10px,#4da6ff 80px);
+    background-size: 100% 80px; 
     top: 40%;
     left: 35%; 
     border-radius: 15%;
