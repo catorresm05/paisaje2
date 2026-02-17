@@ -67,7 +67,7 @@ body {
     top: 40%;
     left: 35%; 
     border-radius: 15%;
-    animation: caida 2s infinite linear;
+    animation: caida 1s infinite linear;
 }
 
 @keyframes caida {
