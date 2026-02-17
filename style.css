@@ -62,26 +62,26 @@ body {
     position: absolute;
     width: 8%;
     height: 50%;
-    background: linear-gradient(to bottom, #ffffff, #4da6ff, #ffffff);
-    background-size: 100% 200%; 
+    background: repeating-linear-gradient( to bottom, #ffffff 0px, #a6d3ff 10px,#4da6ff 50px);
+    background-size: 100% 50px; 
     top: 40%;
     left: 35%; 
-    border-radius: 20%;
-    animation: caida 1s infinite linear;
+    border-radius: 15%;
+    animation: caida 0.4s infinite linear;
 }
 
 @keyframes caida {
-    0% {
+    from {
         background-position: 0 0;
     }
-    100% {
-        background-position: 0 100%;
+    to {
+        background-position: 0 50px;
     }
 }
 
 #rio2 {
     position: absolute;
-    width: 60%;
+    width: 67%;
     height: 15%;
     background: #3399ff;
     bottom: 0;
