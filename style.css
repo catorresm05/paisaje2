@@ -10,9 +10,17 @@ body {
     background: linear-gradient(to bottom, #87CEEB 0%, #cceeff 40%, #66cc66 40%, #228B22 100%);
 }
 
-#titulo {
+#contenedor-titulo {
     position: absolute;
-    left: 30vw;
+    top: 10vh;
+    width: 100%;
+    text-align: center;
+}
+
+#mensaje {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 #sol {
@@ -100,6 +108,7 @@ body {
     border-radius: 10% 0 0 40%;
 }
 
+
 #cascada,
 #rio1,
 #rio2,
@@ -112,12 +121,12 @@ body {
     left: 57%;
 }
 
-#cascada:hover ~ #rio2 {
+#cascada:hover ~ #rio2 { /* llamar cosas que están después del elemento del hover */
     width: 44%;
     left: 56%
 }
 
-#fondo:has(#cascada:hover) #rio1 {
+#fondo:has(#cascada:hover) #rio1 { /* llamar cosas que están antes del elemento del hover */
     width: 66%;
 }
 
