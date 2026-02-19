@@ -1,10 +1,13 @@
 console.log("funciona!")
 
 const variablet = document.getElementById("titulo");
-
 const mensaje = document.getElementById("mensaje");
+const textol = ["uno", "dos", "tres", "cuatro", "cinco"];
+const narra = document.getElementById("texto");
+
 
 console.log("titulo");
+console.log(texto[0]);
 
 let contador = 0;
 let textoInicial = true;
@@ -32,3 +35,10 @@ variablet.addEventListener("click", () => {
     }
     textoInicial = !textoInicial
 });
+
+let texti = 0;
+
+narra.addEventListener("click", () => {
+    narra.innerText = textol[texti];
+    texti += 1;
+})
