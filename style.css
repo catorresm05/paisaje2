@@ -4,9 +4,15 @@ body {
 
 #fondo {
     position: relative;
-    width: 100vw; /* full viewport width significa ancho de la ventana gráfica */
+    width: 100vw;
+    /* full viewport width significa ancho de la ventana gráfica */
     height: 100vh;
     background: linear-gradient(to bottom, #87CEEB 0%, #cceeff 40%, #66cc66 40%, #228B22 100%);
+}
+
+#titulo {
+    position: absolute;
+    left: 30vw;
 }
 
 #sol {
@@ -25,13 +31,14 @@ body {
     width: 100%;
     height: 30%;
     background: #3fa34d;
-    border-radius: 50% 50% 0 0; /* Redondea las esquinas superiores % del tamaño del elemento */
+    border-radius: 50% 50% 0 0;
+    /* Redondea las esquinas superiores % del tamaño del elemento */
 }
 
 #rio1 {
     position: absolute;
     width: 44%;
-    height:10%;
+    height: 10%;
     background: #4da6ff;
     top: 36%;
     left: 0%;
@@ -40,7 +47,7 @@ body {
 
 #alcantilado1 {
     position: absolute;
-    width: 25%;
+    width: 33%;
     height: 45%;
     background: #2e8b57;
     top: 40%;
@@ -50,7 +57,7 @@ body {
 
 #alcantilado2 {
     position: absolute;
-    width: 30%;
+    width: 55%;
     height: 45%;
     background: #2e8b57;
     top: 40%;
@@ -62,12 +69,10 @@ body {
     position: absolute;
     width: 8%;
     height: 50%;
-    background: repeating-linear-gradient(
-        to bottom,
-        #d3e9ff 0vh,
-        #a6d3ff 0.7vh,
-        #4da6ff 5vh
-    );
+    background: repeating-linear-gradient(to bottom,
+            #d3e9ff 0vh,
+            #a6d3ff 0.7vh,
+            #4da6ff 5vh);
     top: 40%;
     left: 35%;
     border-radius: 15%;
@@ -79,6 +84,7 @@ body {
     from {
         background-position: 0 0;
     }
+
     to {
         background-position: 0 5vh;
     }
@@ -86,10 +92,39 @@ body {
 
 #rio2 {
     position: absolute;
-    width: 67%;
+    width: 66%;
     height: 15%;
     background: #3399ff;
     bottom: 0;
     left: 34%;
     border-radius: 10% 0 0 40%;
+}
+
+#cascada,
+#rio1,
+#rio2,
+#alcantilado1,
+#alcantilado2 {
+    transition: all 2.5s ease;
+}
+
+#cascada:hover {
+    left: 57%;
+}
+
+#cascada:hover ~ #rio2 {
+    width: 44%;
+    left: 56%
+}
+
+#fondo:has(#cascada:hover) #rio1 {
+    width: 66%;
+}
+
+#fondo:has(#cascada:hover) #alcantilado1 {
+    width: 55%;
+}
+
+#fondo:has(#cascada:hover) #alcantilado2 {
+    width: 33%;
 }
