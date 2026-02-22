@@ -1,5 +1,11 @@
+:root {
+    --sun-transition: 2s;
+}
+
 body {
     margin: 0;
+    font-family: 'Cinzel', serif;
+    color: #111111;
 }
 
 #fondo {
@@ -8,6 +14,8 @@ body {
     /* full viewport width significa ancho de la ventana gráfica */
     height: 100vh;
     background: linear-gradient(to bottom, #87CEEB 0%, #cceeff 40%, #66cc66 40%, #228B22 100%);
+    transition: background var(--sun-transition) ease;
+    overflow: hidden;
 }
 
 #contenedor-titulo {
@@ -17,10 +25,15 @@ body {
     text-align: center;
 }
 
-#mensaje {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+#titulo {
+    position: relative;
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 1s ease;
+    z-index: 5;
 }
 
 #sol {
@@ -31,6 +44,8 @@ body {
     border-radius: 50%;
     top: 7%;
     right: 8%;
+    transition: left 3s ease;
+    z-index: 1;
 }
 
 #montanias {
@@ -61,6 +76,7 @@ body {
     top: 40%;
     left: 0;
     border-top-right-radius: 20%;
+    z-index: 2;
 }
 
 #alcantilado2 {
@@ -71,6 +87,7 @@ body {
     top: 40%;
     right: 0;
     border-top-left-radius: 20%;
+    z-index: 4;
 }
 
 #cascada {
@@ -86,6 +103,16 @@ body {
     border-radius: 15%;
     animation: caida 0.5s infinite linear;
     will-change: background-position;
+    z-index: 2;
+}
+
+#gato {
+    position: absolute;
+    top: 48%;
+    left: 45%;
+    width: 12%;
+    z-index: 3; 
+    transition: transform 1.5s ease;
 }
 
 @keyframes caida {
@@ -106,6 +133,7 @@ body {
     bottom: 0;
     left: 34%;
     border-radius: 10% 0 0 40%;
+    z-index: 4;
 }
 
 
@@ -114,7 +142,7 @@ body {
 #rio2,
 #alcantilado1,
 #alcantilado2 {
-    transition: all 2.5s ease;
+    transition: all 3s ease;
 }
 
 #cascada:hover {
