@@ -65,8 +65,6 @@ let indice = 0;
 
 function actualizarCielo() {
 
-    fondo.style.transition = "background 2s ease";
-
     if (indice <= 9) {
 
         let progreso = indice / 9;
@@ -92,7 +90,7 @@ function actualizarCielo() {
                 #66cc66 40%,
                 #228B22 100%)`;
 
-        titulo.style.color = "#000";
+        titulo.style.color = "#c50000";
     }
 }
 
